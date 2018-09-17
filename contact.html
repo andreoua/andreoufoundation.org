@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Επικοινωνία Ιδρύματος</title>
+<style type="text/css">
+<!--
+.space {
+	margin-right: 15px;
+}
+.grey {
+	background-color: #474749;
+	border-spacing:0px;
+}
+.text {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #474749;
+}
+.andreou {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ED6D25;
+}
+.white {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+}
+.margin {
+	margin-left: 10px;
+}
+.line {
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #FFF;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+}
+a:link {
+	text-decoration: none;
+	color: #C8B299;
+}
+a:visited {
+	text-decoration: none;
+	color: #C8B299;
+}
+a:hover {
+	text-decoration: none;
+	color: #C8B299;
+}
+a:active {
+	text-decoration: none;
+	color: #C8B299;
+}
+.lang {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.whitebio {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	margin-left: 10px;
+}
+.whitebio2 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	margin-right: 10px;
+}
+.bio {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: #FFF;
+	padding-left: 31px;
+	padding-top: 50px;
+}
+.space2 {
+	padding-top: 0px;
+	padding-bottom: 30px;
+}
+.sub {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C8B299;
+	padding-left: 54px;
+}
+body {
+	background-color: #474749;
+}
+.chrono {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFF;
+	margin-right: 8px;
+}
+.chrono2 {
+	margin-top: 20px;
+	margin-left: 32px;
+}
+.dates {
+	margin-left: 32px;
+}
+.tooltip {
+	display:none;
+	position:absolute;
+	border:1px solid #333;
+	background-color:#161616;
+	border-radius:5px;
+	padding:10px;
+	color:#fff;
+	font-size:12px Arial;
+}
+.sub2 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C8B299;
+	margin-left: 160px;
+}
+.right {
+	text-align: right;
+}
+.fields {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	background-color: #474749;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #FFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	height: 30px;
+	border-spacing:0px;
+}
+.fields2 {
+	border-left-width: thin;
+	border-left-style: solid;
+	border-left-color: #FFF;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #FFF;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	background-color: #474749;
+	border-top-style: solid;
+	border-right-style: solid;
+	margin-top: 15px;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+}
+.fields3 {
+	padding-top: 10px;
+}
+-->
+
+
+</style>
+
+
+
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+// Tooltip only Text
+$('.masterTooltip').hover(function(){
+        // Hover over code
+        var title = $(this).attr('title');
+        $(this).data('tipText', title).removeAttr('title');
+        $('<p class="tooltip"></p>')
+        .text(title)
+        .appendTo('body')
+        .fadeIn('slow');
+}, function() {
+        // Hover out code
+        $(this).attr('title', $(this).data('tipText'));
+        $('.tooltip').remove();
+}).mousemove(function(e) {
+        var mousex = e.pageX + 20; //Get X coordinates
+        var mousey = e.pageY + 10; //Get Y coordinates
+        $('.tooltip')
+        .css({ top: mousey, left: mousex })
+});
+});
+</script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+
+<script type="text/javascript">
+
+$(function() {
+		   
+$('a.lightbox').lightBox();
+		  });
+
+</script>
+
+</head>
+
+<body bgcolor="#474749" onload="MM_preloadImages('images/arxiki btn on over.png')">
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0" class="grey" >
+  <tr>
+    <td width="394" align="center"><table width="1024" border="0">
+      <tr>
+        <td width="244"><a href="index.html"><img src="images/logo andreou.png" width="244" height="139" border="0" /></a></td>
+        <td align="right" valign="top"> <span class="lang"><span class="andreou"><a href="viografia.html">GR.</a> </span></span><a href="contact.html">EN.</a> <a href="contact.html">FR.</a> <a href="https://www.facebook.com/pages/%CE%8A%CE%B4%CF%81%CF%85%CE%BC%CE%B1-%CE%9A%CF%8E%CF%83%CF%84%CE%B1-%CE%91%CE%BD%CE%B4%CF%81%CE%AD%CE%BF%CF%85/166971170020445" target="_blank"><img src="images/facebook icon.png" alt="" width="19" height="19" border="0" /></a></td>
+      </tr>
+    </table>
+      <table width="970" border="0">
+      <tr>
+        <td align="right"><a href="index.html"><img src="images/BTN-WHITE-arxiki.png" width="65" height="17" border="0" class="space" /></a><a href="viografia.html"><img src="images/BTN-WHITE-bio.png" width="96" height="17" border="0" class="space" /></a><a href="erga.html"><img src="images/BTN-WHITE-erga.png" width="45" height="17" border="0" class="space" /></a><a href="diagonismoi.html"><img src="images/BTN-WHITE-diagonismoi.png" width="116" height="17" border="0" class="space" /></a><a href="contact.html"><img src="images/BTN-WHITE-epikoinonia.png" width="113" height="17" border="0" /></a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="right">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="left"><table width="961" border="0" class="dates">
+      <tr>
+        <td><p><img src="images/epikoinonia andreou.png" width="187" height="38" /></p>
+          <p><img src="images/LINE WHITE.png" width="959" height="7" /></p></td>
+      </tr>
+    </table>
+      <table width="961" border="0" cellpadding="0" cellspacing="0" class="dates">
+        <tr>
+          <td width="160" rowspan="2" valign="top"><img src="images/logo white.png" width="148" height="105" /></td>
+          <td width="135" rowspan="2" align="center"><img src="images/line diagonal.png" width="65" height="251" /></td>
+          <td><img src="images/email us.png" width="87" height="23" /></td>
+          <td width="135" rowspan="2" align="center"><img src="images/line diagonal.png" width="65" height="251" /></td>
+          <td width="160"><img src="images/find us.png" width="74" height="23" /></td>
+        </tr>
+        <tr>
+          <td valign="top"><form id="form1" name="form1" method="post" action="http://www.andreoufoundation.org/send.php">
+            <table width="371" border="0" cellpadding="0" cellspacing="0" border-spacing="0">
+              <tr>
+                <td width="85" valign="bottom" class="fields">Όνομα:</td>
+                <td valign="bottom"><input name="name" type="text" class="fields" id="name" size="48" /></td>
+              </tr>
+              <tr>
+                <td valign="bottom" class="fields"><span class="white">Επίθετο:</span></td>
+                <td valign="bottom"><input name="lname" type="text" class="fields" id="lname" size="48" /></td>
+              </tr>
+              <tr>
+                <td valign="bottom" class="fields"><span class="white">Τηλέφωνο:</span></td>
+                <td valign="bottom"><input name="telephone" type="text" class="fields" id="telephone" size="48" /></td>
+              </tr>
+              <tr align="right">
+                <td align="left" valign="bottom" class="fields"><span class="white">Email:</span></td>
+                <td align="left" valign="bottom"><input name="email" type="text" class="fields" id="email" size="48" /></td>
+              </tr>
+              <tr>
+                <td valign="top" class="fields3"><span class="white">Μήνυμα:</span></td>
+                <td><textarea name="msg" cols="45" rows="7" class="fields2" id="msg"></textarea></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td align="right"><br />                  <input name="send" type="submit" class="fields" id="send" value="Αποστολή" /></td>
+              </tr>
+            </table>
+          </form></td>
+          <td valign="top"><p class="white">Χατζή 25, Αθήνα <br />
+            11141 Ελλάδα<br />
+            Τηλ. 210 452 8067<br />
+            <a href="mailto:info@andreoufoundation.org">info@andreoufoundation.org</a></p>
+            <p class="white">* Πιθανή επίσκεψη στο χώρο της γλυπτοθήκης του Κώστα Ανδρέου γίνεται κατόπιν ραντεβού.</p></td>
+        </tr>
+      </table>
+      <table width="961" border="0" class="dates">
+        <tr>
+          <td><p>&nbsp;</p>
+          <p><img src="images/LINE WHITE.png" alt="" width="961" height="7" /></p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr class="grey">
+    <td align="right">&nbsp;</td>
+  </tr>
+  <tr class="grey">
+    <td align="center"><table width="1010" border="0">
+      <tr>
+        <td width="148" rowspan="3"><a href="index.html"><img src="images/logo white.png" width="148" height="105" border="0" /></a></td>
+        <td width="100" class="line"><a href="index.html">ΑΡΧΙΚΗ</a></td>
+        <td width="100" class="line"><a href="viografia.html">ΒΙΟΓΡΑΦΙΑ</a></td>
+        <td width="100" class="line"><a href="erga.html">ΕΡΓΑ</a></td>
+        <td width="100" class="line"><a href="diagonismoi.html">ΔΙΑΓΩΝΙΣΜΟΙ</a></td>
+        <td width="210" class="line"><a href="contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a></td>
+        <td align="right"><span class="white">FOLLOW US </span><a href="https://www.facebook.com/pages/%CE%8A%CE%B4%CF%81%CF%85%CE%BC%CE%B1-%CE%9A%CF%8E%CF%83%CF%84%CE%B1-%CE%91%CE%BD%CE%B4%CF%81%CE%AD%CE%BF%CF%85/166971170020445" target="_blank"><img src="images/facebook icon.png" width="19" height="19" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td valign="top" class="white"><a href="viografia.html">ΒΙΟΓΡΑΦΙΚΟ</a><br />
+          <span class="space"><a href="xronologio.html">ΧΡΟΝΟΛΟΓΙΟ</a></span> <br /></td>
+        <td valign="top" class="white"><a href="erga.html#glipta">ΓΛΥΠΤΑ</a><br />
+          <a href="erga.html#ladia">ΛΑΔΙΑ</a><br />
+          <a href="erga.html#meletes">ΜΕΛΕΤΕΣ</a><br />
+          <a href="erga.html#allaerga">ΑΛΛΑ ΕΡΓΑ</a><br />
+          <a href="ergo.html">ΣΥΝΟΛΙΚΟ ΕΡΓΟ</a></td>
+        <td>&nbsp;</td>
+        <td valign="top" class="white">Χατζή 25, Αθήνα 11141 Ελλάδα<br />
+          Τηλ. 210 452 8067 <br />
+          Email <a href="mailto:info@andreoufoundation.org">info@andreoufoundation.org</a></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="6">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="7" align="center" class="white">All Rights Reserved &copy; Ίδρυμα Κώστα Ανδρέου, Custom Design <a href="http://www.oneintwo.gr">One in Two Design</a></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
+
+
